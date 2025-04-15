@@ -5,18 +5,17 @@ function atualizarContador() {
 
   const diff = meiaNoite - agora;
   const horas = String(Math.floor(diff / 3600000)).padStart(2, "0");
-  const minutos = String(Math.floor((diff % 3600000) / 60000)).padStart(
-    2,
-    "0"
-  );
-  const segundos = String(Math.floor((diff % 60000) / 1000)).padStart(
-    2,
-    "0"
-  );
+  const minutos = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+  const segundos = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+
+  console.log(document);
+  console.log(document.getElementById("contador"));
+  console.log("aq");
+  console.log(`${segundos}`);
 
   document.getElementById(
     "contador"
-  ).textContent = ${horas}:${minutos}:${segundos};
+  ).textContent = `${horas}:${minutos}:${segundos}`;
 }
 
 setInterval(atualizarContador, 1000);
